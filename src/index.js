@@ -29,4 +29,6 @@ import { argv } from 'yargs'
 //
 // process('sample-project.als', 'sample-project.xml')
 
-console.log(argv)
+const path = argv._[0] || 'main.als'
+
+console.log(path)
