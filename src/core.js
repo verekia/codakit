@@ -72,8 +72,16 @@ const processAls = (path: string) => {
       xml2js.parseString(gzip.toString(), (err3, abletonObj) => {
         cleanAbleton(abletonObj)
         linkDescendance(abletonObj)
-        // eslint-disable-next-line no-console
-        console.log(lintResults(abletonObj.Ableton.LiveSet))
+        const results = lintResults(abletonObj.Ableton.LiveSet)
+        if (results.length) {
+          results.forEach((typeOfIssue) => {
+            typeOfIssue.forEach((issue) => {
+              // eslint-disable-next-line no-console
+              console.log(issue)
+            })
+          })
+          process.exit(1)
+        }
       })
     })
   })
