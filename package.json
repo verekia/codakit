@@ -5,6 +5,7 @@
   "author": "Jonathan Verrecchia - @verekia",
   "license": "MIT",
   "main": "./lib/index.js",
+  "directories": "lib",
   "scripts": {
     "start": "yarn build && node lib",
     "build": "rimraf lib && babel src -d lib --ignore .test.js",
