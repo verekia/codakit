@@ -20,3 +20,5 @@
 // }
 //
 // process('sample-project.als', 'sample-project.xml')
+
+export default 'codakit module'

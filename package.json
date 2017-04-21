@@ -4,13 +4,14 @@
   "repository": "verekia/codakit",
   "author": "Jonathan Verrecchia - @verekia",
   "license": "MIT",
-  "main": "./lib/index.js",
+  "main": "lib",
   "scripts": {
-    "start": "rimraf lib dist && babel src -d lib --ignore .test.js",
+    "start": "rimraf lib && babel src -d lib --ignore .test.js && node lib",
     "lint": "eslint src",
     "test": "yarn lint && flow && jest --coverage",
     "precommit": "yarn test",
-    "prepush": "yarn test"
+    "prepush": "yarn test",
+    "prepublish": "yarn prepush"
   },
   "dependencies": {
     "babel-polyfill": "^6.23.0",
