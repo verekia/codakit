@@ -1,5 +1,7 @@
 // @flow
 
+import { argv } from 'yargs'
+
 import allTracksNamed from './all-tracks-named'
 import groupRouting from './group-routing'
 import mixTrackMonitoringIn from './mix-track-monitoring-in'
@@ -18,7 +20,7 @@ import noScenes from './no-scenes'
 import foldedTracks from './folded-tracks'
 import UIBlocks from './ui-blocks'
 
-export default ({
+const rules = {
   'all-tracks-named': allTracksNamed,
   'group-routing': groupRouting,
   'mix-track-monitoring-in': mixTrackMonitoringIn,
@@ -44,4 +46,12 @@ export default ({
   // Killer feature: Enforce scale (except clips that are labelled specifically to go offscale)
   // Clip clones (if $var check exact same).
   // Clips même couleur que la piste sauf si named. Clips doivent etre rouges si modulations.
+}
+
+const rulesToDeactivate = argv.deactivate.split(',')
+
+rulesToDeactivate.forEach((ruleKey) => {
+  delete rules[ruleKey]
 })
+
+export default rules
