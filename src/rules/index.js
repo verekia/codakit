@@ -48,7 +48,7 @@ const rules = {
   // Clips même couleur que la piste sauf si named. Clips doivent etre rouges si modulations.
 }
 
-const rulesToDeactivate = argv.deactivate.split(',')
+const rulesToDeactivate = argv.deactivate ? argv.deactivate.split(',') : []
 
 rulesToDeactivate.forEach((ruleKey) => {
   delete rules[ruleKey]

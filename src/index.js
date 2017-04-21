@@ -4,8 +4,10 @@
 
 /* eslint-disable no-console */
 
+import { argv } from 'yargs'
+
 import processAls from './core'
 
-const path = process.argv[2] || 'main.als'
+const path = argv._[0] || 'main.als'
 
 processAls(path)
