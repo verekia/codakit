@@ -8,6 +8,6 @@ import { argv } from 'yargs'
 
 import processAls from './core'
 
-const path = argv._[0] || 'main.als'
+const path = argv.file || 'main.als'
 
 processAls(path)
