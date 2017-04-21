@@ -72,10 +72,8 @@ const processAls = (path: string) => {
       xml2js.parseString(gzip.toString(), (err3, abletonObj) => {
         cleanAbleton(abletonObj)
         linkDescendance(abletonObj)
-        /* eslint-disable no-console */
-        // console.dir(abletonObj.Ableton.LiveSet)
-        console.log(lintResults(abletonObj))
-        /* eslint-enable no-console */
+        // eslint-disable-next-line no-console
+        console.log(lintResults(abletonObj.Ableton.LiveSet))
       })
     })
   })
