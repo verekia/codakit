@@ -21,4 +21,4 @@
 //
 // process('sample-project.als', 'sample-project.xml')
 
-export default 'codakit module'
+module.exports = 'codakit module'
