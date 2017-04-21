@@ -1,5 +1,11 @@
 #! /usr/bin/env node
 
+// @flow
+
+/* eslint-disable no-console */
+
+import { argv } from 'yargs'
+
 // const fs = require('fs')
 // const zlib = require('zlib')
 // const fsExtra = require('fs-extra')
@@ -23,4 +29,4 @@
 //
 // process('sample-project.als', 'sample-project.xml')
 
-module.exports = 'codakit module'
+console.log(argv)
