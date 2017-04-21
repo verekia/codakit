@@ -1,1 +1,5 @@
 src
+coverage
+.babelrc
+.eslintrc.json
+consumer.js
