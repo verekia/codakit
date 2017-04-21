@@ -27,6 +27,6 @@
 //
 // process('sample-project.als', 'sample-project.xml')
 
-const path = process.argv[1] || 'main.als'
+const path = process.argv[2] || 'main.als'
 
 console.log(path)
