@@ -1,10 +1,10 @@
 {
   "name": "codakit",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "repository": "verekia/codakit",
   "author": "Jonathan Verrecchia - @verekia",
   "license": "MIT",
-  "main": "lib",
+  "main": "./lib/index.js",
   "scripts": {
     "start": "rimraf lib && babel src -d lib --ignore .test.js && node lib",
     "lint": "eslint src",
