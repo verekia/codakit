@@ -4,8 +4,6 @@
 
 /* eslint-disable no-console */
 
-import { argv } from 'yargs'
-
 // const fs = require('fs')
 // const zlib = require('zlib')
 // const fsExtra = require('fs-extra')
@@ -29,6 +27,6 @@ import { argv } from 'yargs'
 //
 // process('sample-project.als', 'sample-project.xml')
 
-const path = argv._[0] || 'main.als'
+const path = process.argv[1] || 'main.als'
 
 console.log(path)
