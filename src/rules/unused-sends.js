@@ -1,6 +1,7 @@
 // @flow
 
 import _ from 'lodash'
+import 'colors'
 
 import { getAllTracks, isExceptionTrack } from '../utils'
 
@@ -13,7 +14,7 @@ export default (abletonObj: Object) => {
       // The _.isPlainObject is to check if FloatEvents got turned into a plain object
       // by the clean up function (single automation event) or is still an array (multiple events)
       if (trackSendHolder.Active.Value === 'true' && parseFloat(trackSendHolder.Send.Manual.Value) < 0.0005 && _.isPlainObject(trackSendHolder.Send.ArrangerAutomation.Events.FloatEvent) && !isExceptionTrack(track)) {
-        errors.push(`Disable <b>Send ${indexToLetterMap[index]}</b> on <b>${track.Name.EffectiveName.Value}</b> track`)
+        errors.push(`Disable Send ${indexToLetterMap[index].green} on ${track.Name.EffectiveName.Value.green} track`)
       }
     })
   })

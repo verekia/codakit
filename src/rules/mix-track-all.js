@@ -1,5 +1,7 @@
 // @flow
 
+import 'colors'
+
 import { getAllTracks, findTrackByName, isExceptionTrack } from '../utils'
 
 export default (abletonObj: Object) => {
@@ -9,7 +11,8 @@ export default (abletonObj: Object) => {
   if (mixTrack) {
     allButMixTrack.forEach((track) => {
       if (track.DeviceChain.AudioOutputRouting.Target.Value !== `AudioOut/Track.${mixTrack.$.Id}/TrackIn` && track.TrackGroupId.Value === '-1' && !isExceptionTrack(track)) {
-        errors.push(`Set track <b>${track.Name.EffectiveName.Value}</b>'s audio output to <b>Mix</b>`)
+        // flow-disable-next-line
+        errors.push(`Set track ${track.Name.EffectiveName.Value.green}'s audio output to ${'Mix'.green}`)
       }
     })
   }

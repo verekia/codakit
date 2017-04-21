@@ -73,14 +73,21 @@ const processAls = (path: string) => {
         cleanAbleton(abletonObj)
         linkDescendance(abletonObj)
         const results = lintResults(abletonObj.Ableton.LiveSet)
+        let foundError = false
         if (results.length) {
           results.forEach((typeOfIssue) => {
             typeOfIssue.forEach((issue) => {
+              foundError = true
               // eslint-disable-next-line no-console
               console.log(issue)
             })
           })
+        }
+        if (foundError) {
           process.exit(1)
+        } else {
+          // eslint-disable-next-line no-console
+          console.log('🎉 All tests passed!')
         }
       })
     })

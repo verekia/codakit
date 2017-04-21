@@ -1,5 +1,7 @@
 // @flow
 
+import 'colors'
+
 import _ from 'lodash'
 import { isExceptionTrack } from '../utils'
 
@@ -40,7 +42,7 @@ const testAutomationDots = (node, dots) => {
     }
     const trackName = trackAscendant.Name.EffectiveName.Value
     if (!isExceptionTrack(trackAscendant)) {
-      errors.push(`There are <b>${numUselessDots}</b> useless automation dots on <b>${trackName}/${deviceName}/${paramName}</b>`)
+      errors.push(`There are ${numUselessDots} useless automation dots on ${trackName.green}/${deviceName.green}/${paramName.green}`)
     }
   }
 }
