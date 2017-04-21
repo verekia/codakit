@@ -1,12 +1,12 @@
 {
   "name": "codakit",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "repository": "verekia/codakit",
   "author": "Jonathan Verrecchia - @verekia",
   "license": "MIT",
   "main": "./lib/index.js",
-  "directories": [
-    "lib"
+  "files": [
+    "lib/"
   ],
   "scripts": {
     "start": "yarn build && node lib",
