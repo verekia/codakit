@@ -12,7 +12,7 @@ export default (abletonObj: Object) => {
   const scTrack = findTrackByName(abletonObj, scLabel)
   const allButThoseTracks = getAllTracks(abletonObj).filter(track =>
     track.Name.EffectiveName.Value !== mixLabel && track.Name.EffectiveName.Value !== scLabel)
-  if (mixTrack) {
+  if (mixTrack && scTrack) {
     allButThoseTracks.forEach((track) => {
       if (track.DeviceChain.AudioOutputRouting.Target.Value !== `AudioOut/Track.${mixTrack.$.Id}/TrackIn`
         && track.DeviceChain.AudioOutputRouting.Target.Value !== `AudioOut/Track.${scTrack.$.Id}/TrackIn`
