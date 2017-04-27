@@ -38,6 +38,7 @@ const rules = {
   'no-useless-automation-dots': noUselessAutomationDots,
   'unused-sends': unusedSends, // Les MIDI track sans devices montrent pas leurs sends
   'ui-blocks': UIBlocks,
+  // no Solo track
   // wrong-sample-rate
   // No armed midi/audio tracks
   // Re-enable automation is a global Ableton thing, not project-based. Does not save.

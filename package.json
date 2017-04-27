@@ -7,6 +7,7 @@
   "bin": "./lib/index.js",
   "scripts": {
     "start": "yarn build && node lib --file test-projects/project-1/project-1.als",
+    "release": "yarn build && node lib --release",
     "build": "rimraf lib && babel src -d lib --ignore .test.js",
     "lint": "eslint src",
     "test": "yarn lint && flow && jest --coverage",
