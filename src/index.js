@@ -24,7 +24,9 @@ if (argv.release) {
   // flow-disable-next-line
   console.log(`Select ${'(Mix)'.green} track, 44100, 16, POW-r 3, no normalization, export as X.X.X.wav`)
   // flow-disable-next-line
-  console.log(`Switch ${'Export Type'.green} effect to ${'SoundCloud'.green} mode, export again, as X.X.X-sc.wav`)
+  console.log(`Switch ${'Export Type'.green} effect to ${'SoundCloud'.green} mode, make the final volume ${'-0.5db'.green}, export again, as X.X.X-sc.wav`)
+  // flow-disable-next-line
+  console.log(`Switch ${'Export Type'.green} effect to ${'Normal'.green} mode, ${'deactivate the limiter and utilities'.green}, export again, at ${'32 bit depth with normalization'.green} as X.X.X-pure.wav`)
   // flow-disable-next-line
   console.log(`Open ${'Listening Project'.green} (don't save), load track, and listen`)
   // flow-disable-next-line
@@ -35,6 +37,8 @@ if (argv.release) {
   console.log(`Run ${'git tag vX.X.X'.green} and ${'git push'.green} and ${'git push origin --tags'.green}`)
   // flow-disable-next-line
   console.log(`Create a ${'new release on Github'.green} and upload both exports`)
+  // flow-disable-next-line
+  console.log(`Copy exports to ${'Dropbox'.green}`)
 } else {
   processAls(path)
 }
