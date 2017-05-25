@@ -22,11 +22,11 @@ if (argv.release) {
   // flow-disable-next-line
   console.log(`Highlight Selector's ${'clip'.green}, and click ${'Export'}`)
   // flow-disable-next-line
-  console.log(`Select ${'(Mix)'.green} track, 44100, 16, POW-r 3, no normalization, export as X.X.X.wav`)
+  console.log(`Select ${'(Mix)'.green} track, 44100, 16, POW-r 3, no normalization, export as track-X.X.X.wav`)
   // flow-disable-next-line
-  console.log(`Switch ${'Export Type'.green} effect to ${'SoundCloud'.green} mode, make the final volume ${'-0.5db'.green}, export again, as X.X.X-sc.wav`)
+  console.log(`Switch ${'Export Type'.green} effect to ${'SoundCloud'.green} mode, make the final volume ${'-0.5db'.green}, export again, as track-X.X.X-sc.wav`)
   // flow-disable-next-line
-  console.log(`Switch ${'Export Type'.green} effect to ${'Normal'.green} mode, ${'deactivate the limiter and utilities'.green}, export again, at ${'32 bit depth with normalization'.green} as X.X.X-pure.wav`)
+  console.log(`Switch ${'Export Type'.green} effect to ${'Normal'.green} mode, ${'deactivate the limiter and utilities'.green}, export again, at ${'32 bit depth with normalization'.green} as track-X.X.X-pure.wav`)
   // flow-disable-next-line
   console.log(`Open ${'Listening Project'.green} (don't save), load track, and listen`)
   // flow-disable-next-line
