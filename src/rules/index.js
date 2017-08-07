@@ -47,6 +47,7 @@ const rules = {
   // Killer feature: Enforce scale (except clips that are labelled specifically to go offscale)
   // Clip clones (if $var check exact same).
   // Clips même couleur que la piste sauf si named. Clips doivent etre rouges si modulations.
+  // No Deactivated clips
 }
 
 const rulesToDeactivate = argv.deactivate ? argv.deactivate.split(',') : []
